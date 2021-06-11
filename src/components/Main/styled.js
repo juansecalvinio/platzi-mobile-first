@@ -1,13 +1,18 @@
 import styled from 'styled-components';
-import bitcoinsSvg from './../../assets/img/bitcoins.svg';
+import { Colors } from '../../res/colors';
+import batata from './../../assets/img/logo-min.svg';
+import bitcoins from './../../assets/img/bitcoins.svg';
+import check from './../../assets/img/check.svg';
+import clock from './../../assets/img/clock.svg';
+import dollar from './../../assets/img/dollar.svg';
+import eye from './../../assets/img/eye.svg';
 import trendingDown from './../../assets/img/trending-down.svg';
 import trendingUp from './../../assets/img/trending-up.svg';
-import { Colors } from '../../res/colors';
 
 export const MainContainer = styled.main`
     width: 100%;
     height: auto;
-    background-color: #FAF8F7;
+    background-color: ${Colors.off_white};
 
     .main-exchange-container {
         width: 100%;
@@ -27,7 +32,7 @@ export const MainContainer = styled.main`
         height: 200px;
         margin: 0 auto;
         margin-bottom: 50px;
-        background-image: url(${bitcoinsSvg});
+        background-image: url(${bitcoins});
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -38,7 +43,7 @@ export const MainContainer = styled.main`
         font-weight: bold;
         line-height: 2.6rem;
         text-align: center;
-        color: #201E1C;
+        color: ${Colors.warm_black};
     }
     .main-exchange-container p {
         margin-bottom: 30px;
@@ -57,7 +62,7 @@ export const MainContainer = styled.main`
         font-family: 'Inter', sans-serif;
 
         .currency-table--title {
-            color: #F7931A;
+            color: ${Colors.bitcoin_orange};
             margin-bottom: 15px;
             font-size: 1.8rem;
             font-weight: bold;
@@ -75,8 +80,8 @@ export const MainContainer = styled.main`
                 height: 100%;
 
                 td {
-                    color: #BABABA;
-                    background-color: #FFFFFF;
+                    color: ${Colors.grey};
+                    background-color: ${Colors.just_white};
                     font-size: 1.6rem;
                     font-weight: 500;
                     line-height: 1.9rem;
@@ -128,7 +133,7 @@ export const MainContainer = styled.main`
             }
         }
         .currency-table--date {
-            background-color: #FFE9D5;
+            background-color: ${Colors.soft_orange};
             border-radius: 8px;
             height: 30px;
             margin: 0 auto;
@@ -137,7 +142,7 @@ export const MainContainer = styled.main`
             width: 190px;
             
             p {
-                color: #282623;
+                color: ${Colors.warm_black_1};
                 font-size: 1.2rem;
                 font-weight: 300;
                 line-height: 1.5rem;
@@ -172,8 +177,8 @@ export const MainContainer = styled.main`
                 height: 100%;
 
                 td {
-                    color: #BABABA;
-                    background-color: #FFFFFF;
+                    color: ${Colors.grey};
+                    background-color: ${Colors.just_white};
                     font-size: 1.6rem;
                     font-weight: 500;
                     line-height: 1.9rem;
@@ -225,7 +230,7 @@ export const MainContainer = styled.main`
             }
         }
         .commissions-table--date {
-            background-color: #E7F5FF;
+            background-color: ${Colors.soft_blue};
             border-radius: 8px;
             height: 30px;
             margin: 0 auto;
@@ -234,12 +239,110 @@ export const MainContainer = styled.main`
             width: 190px;
             
             p {
-                color: #282623;
+                color: ${Colors.warm_black_1};
                 font-size: 1.2rem;
                 font-weight: 300;
                 line-height: 1.5rem;
             }
         }
     }
-    
+
+    .main-product-detail {
+        position: relative;
+        width: 100%;
+        min-width: 320px;
+        height: auto;
+        padding: 20px 10px;
+        background-color: ${Colors.warm_black};
+
+        .product-detail--batata-logo {
+            position: absolute;
+            width: 40px;
+            height: 25px;
+            top: -10px;
+            left: calc(50% - 20px);
+            background-image: url(${batata});
+        }
+        .product-detail--title {
+            width: 90%;
+            min-width: 288px;
+            height: auto;
+            margin: 0 auto;
+            margin-top: 50px;
+            text-align: center;
+
+            h2 {
+                margin-bottom: 20px;
+                font-size: 2.4rem;
+                font-weight: bold;
+                line-height: 2.6rem;
+                color: ${Colors.just_white};
+            }
+
+            p {
+                margin-bottom: 20px;
+                font-size: 1.4rem;
+                font-weight: 500;
+                line-height: 1.8rem;
+                color: #808080;
+            }
+        }
+        .product-detail--card {
+            width: 90%;
+            min-width: 288px;
+            max-width: 400px;
+            height: 150px;
+            margin: 15px auto;
+            padding: 15px;
+            background-color: ${Colors.black};
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
+
+            .check, .clock, .dollar, .eye {
+                display: inline-block;
+                width: 22px;
+                height: 22px;
+                margin-bottom: 10px;
+            }
+            .check {
+                background: url(${check});
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            .clock {
+                background: url(${clock});
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            .dollar {
+                background: url(${dollar});
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            .eye {
+                background: url(${eye});
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+
+            .product--card-title {
+                margin-bottom: 15px;
+                font-size: 1.8rem;
+                font-weight: bold;
+                line-height: 1.8rem;
+                color: ${Colors.just_white};
+            }
+            .product--card-body {
+                margin-bottom: 15px;
+                font-size: 1.4rem;
+                font-weight: 500;
+                line-height: 1.8rem;
+                color: #808080;
+            }
+        }
+    }
 `;

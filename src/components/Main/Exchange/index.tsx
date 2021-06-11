@@ -1,6 +1,4 @@
 import React from 'react'
-import trendingDown from '../../../assets/img/trending-down.svg';
-import trendingUp from '../../../assets/img/trending-up.svg';
 
 const Exchange = () => {
     return (
